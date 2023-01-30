@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-// import data from './assets/data';
+import data from './assets/data';
 import {Timeline} from './sections'
+
 const TestContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -9,12 +10,12 @@ const TestContainer = styled.div`
   padding: 32px;
   background-color: #faf9f7;
   margin: 0 auto;
-  
+
   @media only screen and (max-width: 600px) {
     width: 375px;
   }
+
 `;
-const data=[]
 function App() {
 
   return (
