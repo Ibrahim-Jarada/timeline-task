@@ -1,9 +1,9 @@
-import DoneIcon from "./DoneIcon";
-import Task from "./Task";
-import ToDoIcon from "./ToDoIcon";
+import DoneIcon from './DoneIcon';
+import Task from './Task';
+import ToDoIcon from './ToDoIcon';
 
 export {
-    Task,
-    DoneIcon,
-    ToDoIcon
-}
+  Task,
+  DoneIcon,
+  ToDoIcon,
+};

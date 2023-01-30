@@ -1,6 +1,5 @@
-import Timeline from "./Timeline";
+import Timeline from './Timeline';
 
-export{
-    Timeline
-
-}
+export {
+  Timeline,
+};

@@ -1,5 +1,7 @@
-import styled from "styled-components";
-import { Task } from "../components";
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { Task } from '../components';
+
 const Hr = styled.div`
   width: 24px;
   height: 2px;
@@ -30,18 +32,30 @@ const TaskContainer = styled.div`
   width: 100%;
 `;
 
-const Timeline = ({ title = "", tasks = [] }) => {
-  return (
-    <Container>
-      <TitleWrapper>{title}</TitleWrapper>
-      <Hr></Hr>
-      <TaskContainer>
-      {tasks.map(({ id, title, status, date }) => (
+const Timeline = ({ title = '', tasks = [] }) => (
+  <Container>
+    <TitleWrapper>{title}</TitleWrapper>
+    <Hr />
+    <TaskContainer>
+      {tasks.map(({
+        id, title, status, date,
+      }) => (
         <Task key={id} title={title} status={status} date={date} />
-        ))}
-        </TaskContainer>
-    </Container>
-  );
+      ))}
+    </TaskContainer>
+  </Container>
+);
+
+Timeline.propTypes = {
+  title: PropTypes.string.isRequired,
+  tasks: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      status: PropTypes.oneOf(['completed', 'in-progress', 'todo']),
+    }),
+  ).isRequired,
 };
 
 export default Timeline;
