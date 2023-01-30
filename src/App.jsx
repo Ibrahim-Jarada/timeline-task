@@ -16,17 +16,15 @@ const TestContainer = styled.div`
   }
 
 `;
-function App() {
-  return (
-    <TestContainer>
+const App = () => (
+  <TestContainer>
 
-      {data?.length > 0 ? (
-        <Timeline title="Assessment timeline" tasks={data} />
-      ) : (
-        <h1>No Data Provided 😅</h1>
-      )}
-    </TestContainer>
-  );
-}
+    {data?.length > 0 ? (
+      <Timeline title="Assessment timeline" tasks={data} />
+    ) : (
+      <h1>No Data Provided 😅</h1>
+    )}
+  </TestContainer>
+);
 
 export default App;
