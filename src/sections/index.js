@@ -1,5 +1,5 @@
 import Timeline from './Timeline';
 
-export default {
+export {
   Timeline,
 };

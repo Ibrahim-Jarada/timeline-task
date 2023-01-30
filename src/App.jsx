@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import data from './assets/data';
-import {Timeline} from './sections'
+import data from './helpers/data';
+import { Timeline } from './sections';
 
 const TestContainer = styled.div`
   display: flex;
@@ -17,11 +17,11 @@ const TestContainer = styled.div`
 
 `;
 function App() {
-
   return (
     <TestContainer>
+
       {data?.length > 0 ? (
-        <Timeline title={"Assessment timeline"} tasks={data} />
+        <Timeline title="Assessment timeline" tasks={data} />
       ) : (
         <h1>No Data Provided 😅</h1>
       )}
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
